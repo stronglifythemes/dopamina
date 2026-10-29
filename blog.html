@@ -4,65 +4,158 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta name="builder" content="Stronglify">
-<link rel="icon" type="image/x-icon" href="https://media.stronglify.com/295/favicon-1791561101.png">
-<title>Ideas y experimentos. · Dopamina</title>
-<meta name="description" content="Notas sobre investigación, prototipos y decisiones de producto.">
+<link rel="icon" type="image/x-icon" href="https://media.stronglify.com/295/favicon-1793291454.png">
+<title>Notas del estudio · Dopamina</title>
+<meta name="description" content="Lo que aprendemos al crear empresas: pruebas, errores y decisiones de producto.">
 <meta name="robots" content="index">
 <link rel="canonical" href="https://stronglifythemes.github.io/dopamina/"><style>
 html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
 fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}img{max-width:100%;height:auto}
 </style><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <script src="https://media.stronglify.com/tailwind-play-3.4.17.js"></script>
-<script>tailwind.config={"theme":{"extend":{"colors":{"page":"#8338EC","ink":"#F5EBFF","accent":"#88FF5F","accentInk":"#351153","muted":"#EEE1FC","surface":"#7028D1","tint":"#F2E7FF","deep":"#351153"},"fontFamily":{"sans":["Outfit","Arial","sans-serif"],"display":["Outfit","Arial","sans-serif"]}}}};</script>
-<style>:focus-visible{outline:2px solid currentColor;outline-offset:5px}::selection{background:#F5EBFF;color:#8338EC}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}body{background-image:radial-gradient(ellipse at 86% 14%,rgba(136,255,95,0.18),transparent 44%),linear-gradient(rgba(131,56,236,0.88),rgba(131,56,236,0.92)),var(--site-image);background-size:auto,auto,cover;background-attachment:scroll,scroll,fixed}.glass{position:relative;backdrop-filter:blur(22px) saturate(145%);-webkit-backdrop-filter:blur(22px) saturate(145%);box-shadow:0 22px 64px rgba(53,17,83,0.3),inset 0 0 36px rgba(255,255,255,.075)}.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.19),rgba(255,255,255,.025) 42%,transparent 66%)}.glass>*{position:relative}.glass.glass-accent{background-color:rgba(136,255,95,0.86)}.glass.glass-surface{background-color:rgba(112,40,209,0.67)}.glass.glass-tint{background-color:rgba(242,231,255,0.85)}.glass.glass-deep{background-color:rgba(53,17,83,0.86)}.glass.glass-ink{background-color:rgba(245,235,255,0.9)}.glass.glass-page{background-color:rgba(131,56,236,0.88)}.glass img[src^="https://placehold.co/"]{opacity:.58}.glass-button{box-shadow:0 8px 28px rgba(53,17,83,0.2),inset 0 0 18px rgba(255,255,255,.14);background-image:linear-gradient(140deg,rgba(255,255,255,.18),transparent 65%);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}.hero-visual{position:relative;isolation:isolate;overflow:hidden;min-height:540px;background-color:#351153;background-image:var(--site-image);background-size:cover;background-position:50% 50%;color:#F5EBFF;box-shadow:0 24px 80px rgba(53,17,83,0.27),inset 0 0 60px rgba(255,255,255,.06)}.hero-visual::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(53,17,83,0.38),rgba(53,17,83,0.28) 62%,rgba(53,17,83,0.18))}.hero-visual>div,.hero-visual>h1,.hero-visual>p{position:relative;z-index:1}.hero-visual h1{color:#F5EBFF;text-shadow:0 8px 35px rgba(53,17,83,0.22)}.hero-visual p{color:#F5EBFF}@media(max-width:767px){body{background-attachment:scroll}.glass{backdrop-filter:blur(16px) saturate(135%);-webkit-backdrop-filter:blur(16px) saturate(135%)}.hero-visual{min-height:500px;background-position:58% 50%}.hero-visual::before{background:rgba(53,17,83,0.5)}}.theme-dopamina .hero-visual{background-color:#351153}.theme-dopamina .hero-visual h1{color:#88FF5F}.theme-dopamina .hero-visual::before{background:rgba(53,17,83,.34)}html{scroll-behavior:smooth}img{max-width:100%;height:auto}[hidden]{display:none!important}.servicios_lista>article:nth-child(1){background-color:rgba(136,255,95,0.86)}.servicios_lista>article:nth-child(2){background-color:rgba(53,17,83,0.86)}.servicios_lista>article:nth-child(3){background-color:rgba(242,231,255,0.85)}</style></head>
-<body class="bg-page font-sans text-ink antialiased theme-dopamina">
-  <style>:root{--site-image:url('https://media.stronglify.com/295/hero-1791561102.jpg')}</style>
-<header class="mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:px-16 relative flex items-center justify-between gap-6 py-7 font-sans">
-  <a href="/" class="text-[23px] font-semibold tracking-[-.04em]">Marca</a>
-  <nav aria-label="Navegación principal" class="hidden items-center gap-8 text-sm md:flex">
-
-<a href="/" class="transition-opacity duration-200 hover:opacity-75">Inicio</a>
-
-<a href="/page" class="transition-opacity duration-200 hover:opacity-75">Nosotros</a>
-
-<a href="/#servicios" class="transition-opacity duration-200 hover:opacity-75">Servicios</a>
-
-<a href="/#contacto" class="transition-opacity duration-200 hover:opacity-75">Contacto</a>
-
-</nav>
-  <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav" class="min-h-11 px-2 text-sm md:hidden">Menú</button>
-  <nav id="mobile-nav" aria-label="Navegación móvil" hidden class="absolute left-6 right-6 top-[85px] z-20 rounded-2xl bg-ink p-6 text-page md:hidden">
-
-<a href="/" class="block py-3 text-xl">Inicio</a>
-
-<a href="/page" class="block py-3 text-xl">Nosotros</a>
-
-<a href="/#servicios" class="block py-3 text-xl">Servicios</a>
-
-<a href="/#contacto" class="block py-3 text-xl">Contacto</a>
-
-</nav>
+<script>tailwind.config={theme:{extend:{colors:{paper:"#F4F4F6",ink:"#121118",soft:"#5C5C68",line:"#D9D9E1",violet:"#8338EC",lime:"#88FF5F"},fontFamily:{sans:["Outfit","Arial","sans-serif"],display:["Outfit","Arial","sans-serif"]}}}};</script>
+<style>html{scroll-behavior:smooth}:focus-visible{outline:2px solid currentColor;outline-offset:4px}::selection{background:#88FF5F;color:#121118}@media(min-width:1024px){.fundadores li:nth-child(even){margin-top:5rem}}.texto{font-size:1.125rem;line-height:1.8;color:#2B2B33}.texto p,.texto ul,.texto ol,.texto blockquote,.texto figure{margin-top:1.5rem}.texto>:first-child{margin-top:0}.texto h2{margin-top:3.5rem;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.05;font-weight:700;letter-spacing:-.03em;color:#121118}.texto h3{margin-top:2.5rem;font-size:1.5rem;line-height:1.2;font-weight:700;letter-spacing:-.02em;color:#121118}.texto a{color:#8338EC;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}.texto a:hover{color:#121118}.texto ul,.texto ol{list-style:disc;padding-left:1.4rem}.texto li{margin-top:.5rem}.texto li::marker{color:#8338EC}.texto blockquote{background:#fff;border-radius:20px;padding:1.5rem 1.75rem;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.25;font-weight:600;letter-spacing:-.02em;color:#121118}.texto blockquote p{margin-top:0}.texto img{width:100%;border-radius:20px}.texto figcaption{margin-top:.75rem;font-size:.95rem;line-height:1.5;color:#5C5C68}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}</style></head>
+<body class="bg-paper font-sans text-ink antialiased">
+  <header class="relative mx-auto flex w-full max-w-[1600px] items-center justify-between gap-6 px-4 py-5 md:px-6">
+  <a href="./" class="shrink-0 rounded-full">
+    <img src="https://placehold.co/160x40" alt="Logo" width="160" height="40" class="h-10 w-auto">
+  </a>
+  <nav aria-label="Navegación principal" class="hidden items-center gap-1 rounded-full bg-white p-1.5 md:flex">
+    
+    <a href="./" class="rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-200 hover:bg-paper">Inicio</a>
+    
+    <a href="./page" class="rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-200 hover:bg-paper">Nosotros</a>
+    
+    <a href="./blog" class="rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-200 hover:bg-paper">Blog</a>
+    
+  </nav>
+  <a href="./#convocatoria" class="hidden items-center gap-2.5 whitespace-nowrap rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:bg-violet active:scale-[.98] lg:inline-flex"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-lime"></span>Convocatoria abierta</a>
+  <button type="button" data-menu-toggle data-close-label="Cerrar" aria-expanded="false" aria-controls="mobile-nav" class="min-h-11 rounded-full bg-white px-5 text-sm font-semibold ring-1 ring-line md:hidden">Menú</button>
+  <nav id="mobile-nav" aria-label="Navegación móvil" hidden class="absolute inset-x-4 top-full z-30 rounded-[28px] bg-ink p-6 text-white shadow-[0_24px_60px_rgba(18,17,24,.25)] md:hidden">
+    
+    <a href="./" class="block py-3 font-display text-2xl font-semibold">Inicio</a>
+    
+    <a href="./page" class="block py-3 font-display text-2xl font-semibold">Nosotros</a>
+    
+    <a href="./blog" class="block py-3 font-display text-2xl font-semibold">Blog</a>
+    
+    <a href="./#convocatoria" class="mt-4 inline-flex items-center gap-2.5 rounded-full bg-lime px-5 py-3 text-sm font-semibold text-ink"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-ink"></span>Convocatoria abierta</a>
+  </nav>
 </header>
-<main id="inicio" class="mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:px-16 py-16 md:py-24">
-<h1 class="font-display text-balance text-[clamp(2.25rem,4.5vw,4rem)] font-medium leading-[1.08] tracking-[-.035em] mb-7">Ideas y experimentos.</h1><p class="max-w-[65ch] text-base leading-8 mb-12">Notas sobre investigación, prototipos y decisiones de producto.</p><div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-blog-list="">
-<article class="glass glass-surface overflow-hidden rounded-[32px]"><a href="/article"><img src="https://media.stronglify.com/295/laboratorios-prototipo-1791566766.png" alt="Imagen de un artículo de investigación" width="1200" height="900" loading="lazy" class="aspect-[4/3] w-full object-cover"><div class="p-8"><h2 class="font-display text-2xl font-medium tracking-tight">Otra forma de fabricar.</h2><p class="mt-5 text-sm leading-7">Una lectura sobre cómo una pregunta se convierte en una prueba y qué decisiones permite tomar.</p></div></a></article>
 
-<article class="glass glass-surface overflow-hidden rounded-[32px]"><a href="/article"><img src="https://media.stronglify.com/295/laboratorios-material-1791566761.png" alt="Imagen de un artículo de investigación" width="1200" height="900" loading="lazy" class="aspect-[4/3] w-full object-cover"><div class="p-8"><h2 class="font-display text-2xl font-medium tracking-tight">El conocimiento encuentra su uso.</h2><p class="mt-5 text-sm leading-7">Una lectura sobre cómo una pregunta se convierte en una prueba y qué decisiones permite tomar.</p></div></a></article>
+<main>
+  <section class="mx-auto w-full max-w-[1600px] px-4 pb-20 pt-10 md:px-6 md:pb-28 md:pt-16">
+    <div class="md:px-6">
+      <h1 class="max-w-[14ch] font-display text-[clamp(2.75rem,9vw,8rem)] font-extrabold leading-[.9] tracking-[-.045em]">Notas del estudio</h1>
+      <p class="mt-6 max-w-[60ch] text-lg leading-8 text-soft">Lo que aprendemos al crear empresas: pruebas, errores y decisiones de producto.</p>
+    </div>
+    <div class="mt-12 grid gap-5 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
+      
+      <article>
+        <a href="./article" class="group flex h-full flex-col rounded-[28px] bg-white p-4">
+          <div class="overflow-hidden rounded-[20px]">
+            <img src="https://media.stronglify.com/295/grad-10-1793291465.svg" alt="Imagen del artículo" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+          </div>
+          <div class="flex flex-1 flex-col p-2 pt-6">
+            <h2 class="font-display text-2xl font-bold leading-tight tracking-[-.03em] md:text-3xl">Cómo elegimos qué problema resolver</h2>
+            <p class="mt-3 max-w-[40ch] text-base leading-7 text-soft">Tres preguntas que hacemos antes de invertir una semana en una idea.</p>
+            <p class="mt-6 w-fit rounded-full bg-paper px-4 py-1.5 text-sm font-semibold text-violet">Método</p>
+          </div>
+        </a>
+      </article>
+      
+      <article>
+        <a href="./article" class="group flex h-full flex-col rounded-[28px] bg-white p-4">
+          <div class="overflow-hidden rounded-[20px]">
+            <img src="https://media.stronglify.com/295/laboratorios-prototipo-1791566766.png" alt="Imagen del artículo" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+          </div>
+          <div class="flex flex-1 flex-col p-2 pt-6">
+            <h2 class="font-display text-2xl font-bold leading-tight tracking-[-.03em] md:text-3xl">Ocho semanas para probar una empresa</h2>
+            <p class="mt-3 max-w-[40ch] text-base leading-7 text-soft">Qué construimos, con quién lo probamos y cuándo decidimos parar.</p>
+            <p class="mt-6 w-fit rounded-full bg-paper px-4 py-1.5 text-sm font-semibold text-violet">Prototipos</p>
+          </div>
+        </a>
+      </article>
+      
+      <article>
+        <a href="./article" class="group flex h-full flex-col rounded-[28px] bg-white p-4">
+          <div class="overflow-hidden rounded-[20px]">
+            <img src="https://media.stronglify.com/295/grad-11-1793291466.svg" alt="Imagen del artículo" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+          </div>
+          <div class="flex flex-1 flex-col p-2 pt-6">
+            <h2 class="font-display text-2xl font-bold leading-tight tracking-[-.03em] md:text-3xl">Lo que nos enseñaron los tenderos</h2>
+            <p class="mt-3 max-w-[40ch] text-base leading-7 text-soft">El crédito no era el único problema. También lo era saber cuánto se vendía cada día.</p>
+            <p class="mt-6 w-fit rounded-full bg-paper px-4 py-1.5 text-sm font-semibold text-violet">Casos</p>
+          </div>
+        </a>
+      </article>
+      
+      <article>
+        <a href="./article" class="group flex h-full flex-col rounded-[28px] bg-white p-4">
+          <div class="overflow-hidden rounded-[20px]">
+            <img src="https://media.stronglify.com/295/grad-12-1793291466.svg" alt="Imagen del artículo" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+          </div>
+          <div class="flex flex-1 flex-col p-2 pt-6">
+            <h2 class="font-display text-2xl font-bold leading-tight tracking-[-.03em] md:text-3xl">Fundar sin saber programar</h2>
+            <p class="mt-3 max-w-[40ch] text-base leading-7 text-soft">Por qué buscamos a quien conoce el problema y no a quien escribe código.</p>
+            <p class="mt-6 w-fit rounded-full bg-paper px-4 py-1.5 text-sm font-semibold text-violet">Fundadores</p>
+          </div>
+        </a>
+      </article>
+      
+      <article>
+        <a href="./article" class="group flex h-full flex-col rounded-[28px] bg-white p-4">
+          <div class="overflow-hidden rounded-[20px]">
+            <img src="https://media.stronglify.com/295/grad-13-1793291466.svg" alt="Imagen del artículo" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+          </div>
+          <div class="flex flex-1 flex-col p-2 pt-6">
+            <h2 class="font-display text-2xl font-bold leading-tight tracking-[-.03em] md:text-3xl">Vender antes de tener producto</h2>
+            <p class="mt-3 max-w-[40ch] text-base leading-7 text-soft">Una oferta en papel nos dice más que cualquier encuesta.</p>
+            <p class="mt-6 w-fit rounded-full bg-paper px-4 py-1.5 text-sm font-semibold text-violet">Ventas</p>
+          </div>
+        </a>
+      </article>
+      
+      <article>
+        <a href="./article" class="group flex h-full flex-col rounded-[28px] bg-white p-4">
+          <div class="overflow-hidden rounded-[20px]">
+            <img src="https://media.stronglify.com/295/grad-14-1793291466.svg" alt="Imagen del artículo" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+          </div>
+          <div class="flex flex-1 flex-col p-2 pt-6">
+            <h2 class="font-display text-2xl font-bold leading-tight tracking-[-.03em] md:text-3xl">Cuándo cerrar una idea a tiempo</h2>
+            <p class="mt-3 max-w-[40ch] text-base leading-7 text-soft">Dos proyectos que paramos y lo que nos dejaron.</p>
+            <p class="mt-6 w-fit rounded-full bg-paper px-4 py-1.5 text-sm font-semibold text-violet">Método</p>
+          </div>
+        </a>
+      </article>
+      
+    </div>
+  </section>
+</main>
 
-<article class="glass glass-surface overflow-hidden rounded-[32px]"><a href="/article"><img src="https://media.stronglify.com/295/laboratorios-prototipo-1791566766.png" alt="Imagen de un artículo de investigación" width="1200" height="900" loading="lazy" class="aspect-[4/3] w-full object-cover"><div class="p-8"><h2 class="font-display text-2xl font-medium tracking-tight">Del laboratorio al primer producto.</h2><p class="mt-5 text-sm leading-7">Una lectura sobre cómo una pregunta se convierte en una prueba y qué decisiones permite tomar.</p></div></a></article>
-
-<article class="glass glass-surface overflow-hidden rounded-[32px]"><a href="/article"><img src="https://media.stronglify.com/295/laboratorios-material-1791566761.png" alt="Imagen de un artículo de investigación" width="1200" height="900" loading="lazy" class="aspect-[4/3] w-full object-cover"><div class="p-8"><h2 class="font-display text-2xl font-medium tracking-tight">Aprender con quienes lo utilizan.</h2><p class="mt-5 text-sm leading-7">Una lectura sobre cómo una pregunta se convierte en una prueba y qué decisiones permite tomar.</p></div></a></article>
-
-<article class="glass glass-surface overflow-hidden rounded-[32px]"><a href="/article"><img src="https://media.stronglify.com/295/laboratorios-prototipo-1791566766.png" alt="Imagen de un artículo de investigación" width="1200" height="900" loading="lazy" class="aspect-[4/3] w-full object-cover"><div class="p-8"><h2 class="font-display text-2xl font-medium tracking-tight">Elegir qué probar primero.</h2><p class="mt-5 text-sm leading-7">Una lectura sobre cómo una pregunta se convierte en una prueba y qué decisiones permite tomar.</p></div></a></article>
-
-</div></main>
-<footer class="mx-auto w-full max-w-[1600px] px-6 md:px-10 lg:px-16 flex flex-wrap items-center justify-between gap-5 pb-8 pt-8 font-sans">
-  <a href="/" class="text-[23px] font-semibold tracking-[-.04em]">Marca</a>
-  <p class="max-w-[34ch] text-sm leading-6">Estudio de nuevas empresas de tecnología.</p>
-  <a href="https://stronglifythemes.github.io/dopamina" class="text-sm transition-opacity duration-200 hover:opacity-75">Volver arriba</a>
+<footer id="contacto" class="overflow-hidden bg-ink text-white">
+  <div class="mx-auto w-full max-w-[1600px] px-6 pb-8 pt-16 md:px-12 md:pt-20 lg:px-16">
+    <div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+      <p class="max-w-[22ch] font-display text-2xl font-semibold leading-tight tracking-[-.02em] md:text-3xl">Estudio que crea empresas de tecnología.</p>
+      <nav aria-label="Navegación del pie" class="flex flex-col items-start gap-3 text-base">
+        
+        <a href="./" class="transition-colors duration-200 hover:text-lime">Inicio</a>
+        
+        <a href="./page" class="transition-colors duration-200 hover:text-lime">Nosotros</a>
+        
+        <a href="./blog" class="transition-colors duration-200 hover:text-lime">Blog</a>
+        
+      </nav>
+      <div>
+        <p class="text-sm text-white/70">Escríbenos</p>
+        <p class="mt-2 break-words text-base font-semibold text-lime">tucorreoaqui</p>
+      </div>
+    </div>
+    <p class="mt-16 font-display text-[clamp(3.5rem,17.5vw,18rem)] font-extrabold leading-[.8] tracking-[-.06em] text-violet md:mt-24">Dopamina</p>
+  </div>
 </footer><script>
-document.querySelectorAll('[data-menu-toggle]').forEach(function(b){var n=document.getElementById(b.getAttribute('aria-controls'));function close(){n.hidden=true;b.setAttribute('aria-expanded','false');b.textContent='Menú';}b.addEventListener('click',function(){var open=b.getAttribute('aria-expanded')==='true';n.hidden=open;b.setAttribute('aria-expanded',String(!open));b.textContent=open?'Menú':'Cerrar';});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});});
+document.querySelectorAll('[data-menu-toggle]').forEach(function(b){var n=document.getElementById(b.getAttribute('aria-controls')),m=b.textContent,x=b.getAttribute('data-close-label');function c(){n.hidden=true;b.setAttribute('aria-expanded','false');b.textContent=m}b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';n.hidden=o;b.setAttribute('aria-expanded',String(!o));b.textContent=o?m:x});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',c)});document.addEventListener('keydown',function(e){if(e.key==='Escape')c()})});
 </script></body>
 </html>
